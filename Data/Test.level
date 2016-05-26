@@ -1,0 +1,152 @@
+shaders
+{
+
+vs=Data/TestVertexShader.glsl; 
+fs=Data/TestFragmentShader.glsl;
+
+}
+
+objectdata
+{
+
+camera{
+
+type = camera;
+bounds = Data/Objects/Camera.bounds;
+
+}
+
+sky{
+
+type  = obj;
+dir   = Data/Objects/;
+mesh  = Data/Objects/SkyBox.obj;
+
+}
+
+ground{
+
+type   = obj;
+dir    = Data/Objects/;
+mesh   = Data/Objects/Ground.obj;
+bounds = Data/Objects/Ground.bounds;
+
+}
+
+walls{
+
+type   = obj;
+dir    = Data/Objects/;
+mesh   = Data/Objects/Walls.obj;
+bounds = Data/Objects/Walls.bounds;
+
+}
+
+shedwalls{
+
+type   = obj;
+dir    = Data/Objects/Shed/;
+mesh   = Data/Objects/Shed/ShedWalls.obj;
+bounds = Data/Objects/Shed/ShedWalls.bounds;
+
+}
+
+shedfloor{
+
+type   = obj;
+dir    = Data/Objects/Shed/;
+mesh   = Data/Objects/Shed/ShedFloor.obj;
+bounds = Data/Objects/Shed/ShedFloors.bounds;
+
+}
+
+shedroof{
+
+type   = obj;
+dir    = Data/Objects/Shed/;
+mesh   = Data/Objects/Shed/ShedRoof.obj;
+bounds = Data/Objects/Shed/ShedRoof.bounds;
+
+}
+
+guy{
+
+type   = md5;
+dir    = Data/Objects/Guy/;
+mesh   = Data/Objects/Guy/Guy.md5mesh;
+anim   = run, Data/Objects/Guy/Guy.md5anim;
+bounds = Data/Objects/Guy/Guy.bounds;
+
+}
+
+gun{
+
+type = md5;
+dir  = Data/Objects/Gun/;
+mesh = Data/Objects/Gun/Gun.md5mesh;
+anim = fire, Data/Objects/Gun/Gun.md5anim;
+
+}
+
+}
+
+objects
+{
+
+camera{
+
+obj_type = camera;
+position =-4.0, 1.0, 0.0, 0.0;
+crosshairs=Data/Objects/crosshairs.tga;
+healthfont=Data/Fonts/carbon.ttf;
+
+}
+
+gun{
+
+obj_type = player_weapon;
+
+}
+
+sky{
+
+obj_type = sky_box;
+
+}
+
+ground{
+
+obj_type = static_object;
+position = 0.0, 0.0, 0.0, 0.0;
+
+}
+
+walls{
+
+obj_type = static_object;
+position = 0.0, 0.0, 0.0, 0.0;
+
+}
+
+shedwalls{
+
+obj_type = static_object;
+position = 0.0, 0.0, 0.0, 0.0;
+
+}
+
+shedfloor{
+
+obj_type = static_object;
+position = 0.0, 0.0, 0.0, 0.0;
+
+}
+
+shedroof{
+
+obj_type = static_object;
+position = 0.0, 0.0, 0.0, 0.0;
+
+}
+
+}
