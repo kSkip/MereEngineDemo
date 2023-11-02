@@ -17,18 +17,18 @@ const vec4 lightSpecular = vec4(0.0, 0.0, 0.0, 0.0);
 
 void main(){	
 
-	vec3 lightDirection = normalize(vec3(0.0,0.0,0.0) - vec3(1.0,1.0,1.0));
+	vec3 lightDirection = -vec3(1.0,1.0,1.0);
 
 	if(!skipLighting){
 
-		vec3 mvLightDirection = (P * MV * vec4(lightDirection, 0.0)).xyz,
-			normal = normalize(fragNormal),
-			eye = normalize(fragPosition),
-			reflection = reflect(mvLightDirection, normal);
+		vec3 mvLightDirection = normalize((MV * vec4(lightDirection, 0.0)).xyz);
+		vec3 normal = normalize(fragNormal);
+		vec3 eye = normalize(fragPosition);
+		vec3 reflection = reflect(mvLightDirection, normal);
 
 		vec4 fragDiffuse = texture2D(tex, fragTexcoord);
 
-		vec4 diffuseFactor = max(-dot(normal, mvLightDirection), 0.0) * lightDiffuse;
+		vec4 diffuseFactor = max(dot(normal, mvLightDirection), 0.0) * lightDiffuse;
 
 		vec4 ambientDiffuseFactor = diffuseFactor + lightAmbient;
 

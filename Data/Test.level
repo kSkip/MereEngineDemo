@@ -96,7 +96,7 @@ objects
 camera{
 
 obj_type = camera;
-position =-4.0, 1.0, 0.0, 0.0;
+position =-3.0, 2.0, 0.0, 0.0;
 crosshairs=Data/Objects/crosshairs.tga;
 healthfont=Data/Fonts/carbon.ttf;
 
@@ -146,6 +146,13 @@ shedroof{
 
 obj_type = static_object;
 position = 0.0, 0.0, 0.0, 0.0;
+
+}
+
+guy{
+
+obj_type = character;
+position = 3.0, 2.0, 0.0, 0.0;
 
 }
 

@@ -26,6 +26,7 @@ void main(){
 	if(!skipMVP){
 
 		gl_Position = P * MV * transformedposition;
+		transformednormal = MV * transformednormal;
 
 	}else{
 
